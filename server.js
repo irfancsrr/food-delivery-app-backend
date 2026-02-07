@@ -35,8 +35,10 @@ app.get("/",(req,res)=>{
         res.send("API working")
 })
 
-app.listen(port,()=>{
-    console.log(`Server started on http://localhost:${port}`)
-})
+export default app;
+
+// app.listen(port,()=>{
+//     console.log(`Server started on http://localhost:${port}`)
+// })
 
 //mongodb+srv://dulanjalisenarathna93:E2JUb0zfaT2FVp8D@cluster0.exkxkun.mongodb.net/?
