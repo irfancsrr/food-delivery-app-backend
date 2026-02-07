@@ -6,6 +6,8 @@ import userRouter from './routes/userRoute.js';
 import 'dotenv/config';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
+// import promoModel from './models/promocode.js';
+import { promoRouter } from './routes/promoRoute.js';
 
 //app config
 const app = express()
@@ -24,6 +26,10 @@ app.use("/images",express.static('uploads'))
 app.use('/api/user', userRouter)
 app.use('/api/cart', cartRouter)
 app.use('/api/order', orderRouter)
+app.use('/api/promo',promoRouter);
+// app.use('/api/promo',)
+// app.post('/api/promo',)
+// app.get('/api/promo',)
 
 app.get("/",(req,res)=>{
         res.send("API working")
